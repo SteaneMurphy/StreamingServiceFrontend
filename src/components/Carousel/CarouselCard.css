@@ -1,0 +1,13 @@
+.carouselCardContainer
+{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 2px;
+}
+
+.cardImage
+{
+    border-radius: 4px;
+    width: 298px;
+    height: auto;
+}

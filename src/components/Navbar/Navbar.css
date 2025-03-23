@@ -1,0 +1,36 @@
+.navbarContainer
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    position: relative;
+    z-index: 1;
+    height: 68px;
+    width: 100%;
+}
+
+.linkContainer
+{
+    display: flex;
+    align-items: center;
+}
+
+.link
+{
+    text-decoration: none;
+    color: #e5e5e5;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.navbarLeftSubContainer
+{
+    display: flex;
+}
+
+.navbarRightSubContainer
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}

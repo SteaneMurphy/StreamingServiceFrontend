@@ -1,0 +1,19 @@
+.carouselButton
+{
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 1);
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 15px;
+}
+
+.next 
+{
+    right: 75px;
+}

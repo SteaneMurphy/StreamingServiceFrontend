@@ -1,6 +1,23 @@
+@font-face {
+  font-family: 'NetflixSansRegular';
+  src: url('./assets/fonts/NetflixSansRegular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 *
 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root
+{
+  background-color: #141414;
+}
+
+body
+{
+  font-family: 'NetflixSansRegular', sans-serif;
 }

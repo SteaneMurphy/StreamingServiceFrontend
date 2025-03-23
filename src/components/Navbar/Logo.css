@@ -1,0 +1,14 @@
+.logoContainer
+{
+    width: 150px;
+    height: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logoImage
+{
+    width: 90%;
+}
