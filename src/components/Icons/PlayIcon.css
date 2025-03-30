@@ -1,0 +1,21 @@
+.playIconContainer
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.playIconSubContainer
+{
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.playIconContainer:hover
+{
+    background-color: #e6e6e6;
+}

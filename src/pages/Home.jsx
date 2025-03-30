@@ -33,6 +33,7 @@ const links =
         <Navbar links={links}/>
         <Featured />
         <Carousel /> {/* for each catergory, instantiate a carousel component*/}
+        <Carousel />
         <TopList />
     </>
   )

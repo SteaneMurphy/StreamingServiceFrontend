@@ -1,0 +1,22 @@
+.infoIconContainer
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #232425;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #909191;
+}
+
+.infoIconSubContainer
+{
+    margin-top: 5px;
+}
+
+.infoIconContainer:hover
+{
+    background-color: #262a2c;
+    border: 2px solid white;
+}
