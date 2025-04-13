@@ -56,7 +56,7 @@ function Carousel({ genreId, genreName }) {
       </div>
       <div 
         className="carouselSubContainer"
-        style={{ transform: `translateX(${offset}px)` }}
+        // style={{ transform: `translateX(${offset}px)` }}
       >
        {movies.map((movie) => (
           <CarouselCard

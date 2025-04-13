@@ -39,10 +39,6 @@ useEffect(() => {
         fetchGenres();
 }, []);
 
-// useEffect(() => {
-//     console.log(genres);
-// }, [genres]);
-
 const links = 
     [
         { 
