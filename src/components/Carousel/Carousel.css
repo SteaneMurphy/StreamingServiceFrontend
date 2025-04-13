@@ -3,16 +3,24 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
     height: 200px;
     width: 100%;
     margin-left: 60px;
     overflow: visible;
+    margin-bottom: 60px;
+}
+
+.carouselHeadingContainer
+{
+    margin-left: 5px;
+    margin-bottom: 15px;
 }
 
 .carouselHeading
 {
     color: #e5e5e5;
+    font-size: 1.4vw;
+    font-weight: 600;
 }
 
 .carouselSubContainer
@@ -20,4 +28,6 @@
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: 100%;
+    position: relative;
+    will-change: transform;
 }

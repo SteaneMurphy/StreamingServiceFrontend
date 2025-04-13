@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar/Navbar.jsx';
 import Featured from '../components/Featured.jsx';
 import Carousel from '../components/Carousel/Carousel.jsx';
-import TopList from '../components/TopList.jsx';
+import Footer from '../components/Footer.jsx';
 
 function Home() {
 
@@ -17,7 +17,6 @@ useEffect(() => {
                 const token = import.meta.env.VITE_API_KEY;
                 const response = await fetch(
                     `https://api.themoviedb.org/3/genre/movie/list`,
-                    // `https://api.themoviedb.org/3/discover/movie?with_genres=28`,
                     {
                         method: "GET",
                         headers: 
@@ -40,9 +39,9 @@ useEffect(() => {
         fetchGenres();
 }, []);
 
-useEffect(() => {
-    console.log(genres);
-}, [genres]);
+// useEffect(() => {
+//     console.log(genres);
+// }, [genres]);
 
 const links = 
     [
@@ -70,14 +69,16 @@ const links =
     <>
         <Navbar links={links}/>
         <Featured />
-        {genres.length > 0 ? (
-            genres.map((genre) => (
-                <Carousel key={genre.id} genreId={genre.id} genreName={genre.name}/>
-            ))
-        ) : (
-            <span>loading...</span>
-        )}
-        <TopList />
+        <div className='carouselContainers'>
+            {genres.length > 0 ? (
+                genres.map((genre) => (
+                    <Carousel key={genre.id} genreId={genre.id} genreName={genre.name}/>
+                ))
+            ) : (
+                <span>loading...</span>
+            )}
+        </div>
+        <Footer />
     </>
   )
 };

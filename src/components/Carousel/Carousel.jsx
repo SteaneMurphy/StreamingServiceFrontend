@@ -4,16 +4,20 @@ import CarouselCard from './CarouselCard';
 import CarouselButton from './CarouselButton';
 
 function Carousel({ genreId, genreName }) {
-
-  //increment index by 1
-  //increment slider by 1 card width
-
-  //if click next
-    //add prev card to end of list
-  //if click back
-    //add last card to start of list
-
   const [movies, setMovies] = useState([]);
+  const [index, setIndex] = useState(0);
+  const cardWidth = 306;
+  const cardsPerView = 6;
+
+  const handleNext = () => {
+    setIndex(prev => Math.min(prev + 1, Math.floor(movies.length / cardsPerView) - 1));
+  };
+  
+  const handlePrev = () => {
+    setIndex(prev => Math.max(prev - 1, 0));
+  };
+
+  const offset = -(index * cardWidth * cardsPerView);
 
   useEffect(() => {
     const fetchMovies = async () => 
@@ -44,70 +48,30 @@ function Carousel({ genreId, genreName }) {
         };
         fetchMovies();
   }, []);
-  
-  useEffect(() => {
-    console.log(movies);
-  }, [movies]);
-
-  // const firstCards = 
-  // [
-  //   <CarouselCard key={0} />,
-  //   <CarouselCard key={1} />,
-  //   <CarouselCard key={2} />,
-  //   <CarouselCard key={3} />,
-  //   <CarouselCard key={4} />,
-  //   <CarouselCard key={5} />,
-  // ];
-
-  // const secondCards = 
-  // [
-  //   <CarouselCard key={6} />,
-  //   <CarouselCard key={7} />,
-  //   <CarouselCard key={8} />,
-  //   <CarouselCard key={9} />,
-  //   <CarouselCard key={10} />,
-  //   <CarouselCard key={11} />,
-  // ];
-
-  // const thirdCards = 
-  // [
-  //   <CarouselCard key={12} />,
-  //   <CarouselCard key={13} />,
-  //   <CarouselCard key={14} />,
-  //   <CarouselCard key={15} />,
-  //   <CarouselCard key={16} />,
-  //   <CarouselCard key={17} />
-  // ];
-  
-  // const cards = 
-  // [
-  //   firstCards,
-  //   secondCards,
-  //   thirdCards    
-  // ];
 
   return (
     <div className="carouselContainer">
-      <div>
+      <div className="carouselHeadingContainer">
         <span className="carouselHeading">{genreName}</span>
       </div>
       <div 
         className="carouselSubContainer"
+        style={{ transform: `translateX(${offset}px)` }}
       >
-        {/* {cards} */}
-        {movies.length > 0 ? (
-            movies.map((movie) => (
-                <CarouselCard key={movie.id} imagePath={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}/>
-            ))
-        ) : (
-            <span>loading...</span>
-        )}
+       {movies.map((movie) => (
+          <CarouselCard
+            key={movie.id}
+            imagePath={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
+          />
+        ))}
       </div>
         <CarouselButton 
           type={"prev"}
+          onClick={handlePrev}
         />
         <CarouselButton 
-          type={"next"} 
+          type={"next"}
+          onClick={handleNext} 
         />
     </div>
   )

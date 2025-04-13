@@ -1,0 +1,25 @@
+a, span
+{
+    color: #6a6a6a;
+}
+
+.footerContainer
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.columnContainerParent
+{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.columnContainer
+{
+    display: flex;
+    flex-direction: column;
+}

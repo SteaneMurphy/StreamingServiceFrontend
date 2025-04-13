@@ -1,19 +1,41 @@
 .carouselButton
 {
     position: absolute;
-    top: 50%;
+    top: 24%;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(20, 20, 20, 0);
     cursor: pointer;
     padding: 10px;
-    border-radius: 50%;
+    width: 60px;
+    height: 168px;
+}
+
+.carouselButton:hover
+{
+    background-color: rgba(20, 20, 20, 0.5);
+}
+
+.carouselButton:hover .chevronRightContainer
+{
+    visibility: visible;
+}
+
+.carouselButton:hover .chevronLeftContainer
+{
+    visibility: visible;
 }
 
 .prev {
-    left: 15px;
+    left: -60px;
+    border-radius: 4px 0 0 4px;
+    display: flex;
+    align-items: center;
 }
 
 .next 
 {
-    right: 75px;
+    right: 59px;
+    border-radius: 0 4px 4px 0;
+    display: flex;
+    align-items: center;
 }

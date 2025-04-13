@@ -7,6 +7,8 @@
     height: 68px;
     width: 100%;
     position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    transition: background 0.5s ease;
 }
 
 .linkContainer
@@ -38,4 +40,12 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+
+.navbarContainer.solid {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.navbarContainer.transparent {
+    background: transparent;
 }

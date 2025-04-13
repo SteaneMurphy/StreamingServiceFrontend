@@ -1,15 +1,23 @@
+import ChevronLeft from '../Icons/ChevronLeft';
+import ChevronRight from '../Icons/ChevronRight';
 import './CarouselButton.css';
 
-function CarouselButton({ type }) {
+function CarouselButton({ type, onClick }) {
 
     return (
         type === "prev" ?
         <div 
             className="carouselButton prev"
-        ></div> :
+            onClick={onClick}
+        >
+            <ChevronLeft />
+        </div> :
         <div 
             className="carouselButton next"
-        ></div>
+            onClick={onClick}
+        >
+            <ChevronRight />
+        </div>
     )
 };
 
