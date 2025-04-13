@@ -1,3 +1,9 @@
+/*
+    This is the movie card title description component.
+    Eventually further information would be passed down into this card from
+    the information fetched in its parent
+*/
+
 import React from 'react';
 import './CardDescriptor.css';
 import PlayIcon from '../Icons/PlayIcon';
